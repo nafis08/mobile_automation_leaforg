@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="leaforg_automation.AppiumBasics">
+      <class name="leaforg_automation.ContactSupport">
         <methods>
-          <include name="AppiumTest"/>
+          <include name="endTest"/>
+          <include name="contactSupport"/>
         </methods>
-      </class> <!-- leaforg_automation.AppiumBasics -->
+      </class> <!-- leaforg_automation.ContactSupport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
