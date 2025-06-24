@@ -24,17 +24,18 @@ public class ConfigurationAppium {
 	//Global declaration of AndroidDriver object
 	AndroidDriver driver;
 	
-	
+	@BeforeClass
 	public void configureAppium() throws MalformedURLException, URISyntaxException {
 		//Start Appium Server automatically before the test
+				/*
 				service = new AppiumServiceBuilder()
 						.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
 						.withIPAddress("127.0.0.1").usingPort(4723).build();
 				service.start();
-				
+				*/
 				//Device connection setup through UiAutomator2
 				options = new UiAutomator2Options();
-				options.setDeviceName("Pixel7 Pro");
+				options.setDeviceName("TestDevice");
 				options.setApp("/Users/zarintasnim/git/repository/Appium/src/test/java/app_installer/leaforg.apk");
 				options.setCapability("disableWindowAnimation", true);
 				
@@ -48,9 +49,9 @@ public class ConfigurationAppium {
 	@AfterClass
 	public void endTest() {	
 		//App close
-		//driver.quit();		
+		driver.quit();		
 		//Stop the server
-		//service.stop();
+		service.stop();
 		
 	}
 }
