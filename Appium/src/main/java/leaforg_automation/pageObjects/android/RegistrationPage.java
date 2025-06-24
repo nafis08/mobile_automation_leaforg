@@ -64,6 +64,9 @@ public class RegistrationPage {
 	private WebElement registrationButton;
 	
 	
+	@AndroidFindBy(xpath = "//android.webkit.WebView[@text=\"Add Licenses\"]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.widget.Spinner")
+	private WebElement secDatePicker;
+	
 	
 	public void clickCreateAccount() {
 		createAccount.click();
@@ -86,7 +89,7 @@ public class RegistrationPage {
 	}
 	
 	public void inputPhoneNumber(String phn) {
-		emailField.sendKeys(phn);;
+		phoneNumber.sendKeys(phn);;
 	}
 	
 	public void clickStateSelection() {
@@ -131,6 +134,10 @@ public class RegistrationPage {
 	
 	public void clickRegistrationButton() {
 		registrationButton.click();
+	}
+	
+	public void clickSecDatePicker() {
+		secDatePicker.click();
 	}
 	
 }

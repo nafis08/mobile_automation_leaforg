@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -96,5 +97,34 @@ public class TestUtils {
         }
         return sb.toString();
     }
+    
+    //Email ID generator
+    private static final String[] DOMAINS = {
+            "gmail.com", "yahoo.com", "outlook.com", "example.com", "testmail.com"
+        };
+        private static final String CHAR_POOL = "abcdefghijklmnopqrstuvwxyz0123456789";
+        private static final SecureRandom RNG = new SecureRandom();
+
+        
+        public static String RandomEmailGenerator() {
+            int usernameLength = 10;  // or make this configurable
+            StringBuilder user = new StringBuilder(usernameLength);
+            for (int i = 0; i < usernameLength; i++) {
+                user.append(CHAR_POOL.charAt(RNG.nextInt(CHAR_POOL.length())));
+            }
+            String domain = DOMAINS[RNG.nextInt(DOMAINS.length)];
+            return user + "@" + domain;
+        }
+        
+        //Phone number generator
+        public static String RandomPhoneNumberGenerator() {
+            SecureRandom rand = new SecureRandom();
+
+            int areaCode = rand.nextInt(900) + 100;    // 100–999
+            int centralOfficeCode = rand.nextInt(900) + 100;  // 100–999
+            int lineNumber = rand.nextInt(10000);      // 0000–9999
+
+            return String.format("%03d-%03d-%04d", areaCode, centralOfficeCode, lineNumber);
+        }
     
 }
