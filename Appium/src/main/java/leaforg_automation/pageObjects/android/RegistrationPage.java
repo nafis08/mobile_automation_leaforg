@@ -67,6 +67,13 @@ public class RegistrationPage {
 	@AndroidFindBy(xpath = "//android.webkit.WebView[@text=\"Add Licenses\"]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.widget.Spinner")
 	private WebElement secDatePicker;
 	
+	@AndroidFindBy(id = "android:id/date_picker_header_year")
+	private WebElement yearPicker;
+	
+	
+	public boolean yearPicker() {
+		return yearPicker.isDisplayed();
+	}
 	
 	public void clickCreateAccount() {
 		createAccount.click();

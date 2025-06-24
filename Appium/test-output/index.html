@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                    <span class="test-stats">8 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +92,65 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">8 methods, 6 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="leaforg_automation.Registration" class="method navigator-link" hash-for-method="registration">registration</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.BatchesUpdate" class="method navigator-link" hash-for-method="batchesUpdate">batchesUpdate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.ChangePassword" class="method navigator-link" hash-for-method="changePassword">changePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.ContactSupport" class="method navigator-link" hash-for-method="contactSupport">contactSupport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.ParticipantDetails" class="method navigator-link" hash-for-method="participantDetailsUpdate">participantDetailsUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.Registration" class="method navigator-link" hash-for-method="registration">registration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.UpdateUserProfile" class="method navigator-link" hash-for-method="updateUserProfile">updateUserProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.LogIn" class="method navigator-link" hash-for-method="AppiumTest">AppiumTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="leaforg_automation.ForgetPassword" class="method navigator-link" hash-for-method="forgetPassword">forgetPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,8 +161,8 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
               <span class="class-name">leaforg_automation.Registration</span>
@@ -129,151 +173,626 @@
                   <a name="registration">
                   </a> <!-- registration -->
                   <span class="method-name">registration</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.Spinner (tried for 10 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c0167d91-06cb-4992-91e4-480baf22c73a, clickElement {id=00000000-0000-1265-0000-01130000000e}]
 Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0245d9dc-d1e0-4ff0-8708-a9a5c4466ad8
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at leaforg_automation.pageObjects.android.TestUtils.selectDate(TestUtils.java:32)
-	at leaforg_automation.Registration.registration(Registration.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+Element: [[AndroidDriver:  on ANDROID (c0167d91-06cb-4992-91e4-480baf22c73a)] -&gt; xpath: (//android.widget.Button[@text=&quot;CONTINUE&quot;])[2]]
+Session ID: c0167d91-06cb-4992-91e4-480baf22c73a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:79)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6UsM656f.click(Unknown Source)
+	at leaforg_automation.pageObjects.android.RegistrationPage.ClickSecContButton(RegistrationPage.java:127)
+	at leaforg_automation.Registration.registration(Registration.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">leaforg_automation.UpdateUserProfile</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserProfile">
+                  </a> <!-- updateUserProfile -->
+                  <span class="method-name">updateUserProfile</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e2623a32-8fc2-4563-8a9d-11acfb84eaf6, findElement {value=//android.view.View[@text=&quot;TamilNadu&quot;], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e2623a32-8fc2-4563-8a9d-11acfb84eaf6
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$X04EN4Iq.isSelected(Unknown Source)
+	at leaforg_automation.pageObjects.android.UpdateProfilePage.checkSelectedState(UpdateProfilePage.java:85)
+	at leaforg_automation.UpdateUserProfile.updateUserProfile(UpdateUserProfile.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">leaforg_automation.ChangePassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changePassword">
+                  </a> <!-- changePassword -->
+                  <span class="method-name">changePassword</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: &apos;POST /element&apos; cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [63357d92-325f-4ee7-a0bc-9920cea8d35b, findElement {value=//android.widget.EditText[@hint=&quot;Current Password&quot;], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 63357d92-325f-4ee7-a0bc-9920cea8d35b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZSUseYHE.sendKeys(Unknown Source)
+	at leaforg_automation.pageObjects.android.ChangePasswordPage.inputCurrentPassword(ChangePasswordPage.java:52)
+	at leaforg_automation.ChangePassword.changePassword(ChangePassword.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">leaforg_automation.ParticipantDetails</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="participantDetailsUpdate">
+                  </a> <!-- participantDetailsUpdate -->
+                  <span class="method-name">participantDetailsUpdate</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374, clickElement {id=00000000-0000-12a0-ffff-ffff0000002b}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374)] -&gt; id: android:id/prev]
+Session ID: 1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at leaforg_automation.pageObjects.android.TestUtils.selectDate(TestUtils.java:55)
+	at leaforg_automation.ParticipantDetails.participantDetailsUpdate(ParticipantDetails.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">leaforg_automation.BatchesUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="batchesUpdate">
+                  </a> <!-- batchesUpdate -->
+                  <span class="method-name">batchesUpdate</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@resource-id=&quot;alert-hdr-0&quot;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZSUseYHE.getText(Unknown Source)
+	at leaforg_automation.pageObjects.android.BatchPage.checkErrorPopUp(BatchPage.java:53)
+	at leaforg_automation.BatchesUpdate.batchesUpdate(BatchesUpdate.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@162c1dfb (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@resource-id=&quot;alert-hdr-0&quot;]})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 33 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">leaforg_automation.ContactSupport</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contactSupport">
+                  </a> <!-- contactSupport -->
+                  <span class="method-name">contactSupport</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [95b88ae8-341b-4b98-8314-1d6480c011a5, findElement {value=//android.widget.EditText[@hint=&quot;Subject&quot;], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 95b88ae8-341b-4b98-8314-1d6480c011a5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$X04EN4Iq.sendKeys(Unknown Source)
+	at leaforg_automation.pageObjects.android.ContactSupportPage.inputSubjectField(ContactSupportPage.java:62)
+	at leaforg_automation.ContactSupport.contactSupport(ContactSupport.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">leaforg_automation.ForgetPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="forgetPassword">
+                  </a> <!-- forgetPassword -->
+                  <span class="method-name">forgetPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">leaforg_automation.LogIn</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AppiumTest">
+                  </a> <!-- AppiumTest -->
+                  <span class="method-name">AppiumTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/l2/66trt6fx2vg1qxz4x2971wdr0000gn/T/testng-eclipse--1633341928/testng-customsuite.xml</span>
+            <span class="header-content">/Users/zarintasnim/git/repository/Appium/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;LogIn and LogOut&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.LogIn&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- LogIn and LogOut --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;E2E Framework Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;leaforg_automation.Registration&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- E2E Framework Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;User Profile Update&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.UpdateUserProfile&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- User Profile Update --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Participant&amp;#039;s Detail Update&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.ParticipantDetails&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Participant&apos;s Detail Update --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Contact Support&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.ContactSupport&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Contact Support --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Batches Update&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.BatchesUpdate&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Batches Update --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Change Password&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.ChangePassword&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Change Password --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Forget Password&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;leaforg_automation.ForgetPassword&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Forget Password --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">LogIn and LogOut (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">E2E Framework Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">User Profile Update (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Participant's Detail Update (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Contact Support (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Batches Update (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Change Password (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Forget Password (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registration')
 data.setCell(0, 2, 'leaforg_automation.Registration')
-data.setCell(0, 3, 38705);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 3, 34784);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'participantDetailsUpdate')
+data.setCell(1, 2, 'leaforg_automation.ParticipantDetails')
+data.setCell(1, 3, 34554);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'batchesUpdate')
+data.setCell(2, 2, 'leaforg_automation.BatchesUpdate')
+data.setCell(2, 3, 31037);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'changePassword')
+data.setCell(3, 2, 'leaforg_automation.ChangePassword')
+data.setCell(3, 3, 23833);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'forgetPassword')
+data.setCell(4, 2, 'leaforg_automation.ForgetPassword')
+data.setCell(4, 3, 21210);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'updateUserProfile')
+data.setCell(5, 2, 'leaforg_automation.UpdateUserProfile')
+data.setCell(5, 3, 20271);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'AppiumTest')
+data.setCell(6, 2, 'leaforg_automation.LogIn')
+data.setCell(6, 3, 19900);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'contactSupport')
+data.setCell(7, 2, 'leaforg_automation.ContactSupport')
+data.setCell(7, 3, 19883);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">leaforg_automation.Registration</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">leaforg_automation.LogIn</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">configureAppium</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">AppiumTest</span>
+                <span class="method-start">11913 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">31816 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.Registration</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">32962 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">registration</span>
-                <span class="method-start">9639 ms</span>
+                <span class="method-start">42497 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">77285 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.UpdateUserProfile</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">78393 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">updateUserProfile</span>
+                <span class="method-start">87569 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">48348 ms</span>
+                <span class="method-start">107843 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.ParticipantDetails</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">108989 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">participantDetailsUpdate</span>
+                <span class="method-start">118225 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">152780 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.ContactSupport</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">153938 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contactSupport</span>
+                <span class="method-start">163641 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">183526 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.BatchesUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">184718 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">batchesUpdate</span>
+                <span class="method-start">194807 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">225845 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.ChangePassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">226914 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">changePassword</span>
+                <span class="method-start">236624 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">260459 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">leaforg_automation.ForgetPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configureAppium</span>
+                <span class="method-start">261459 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">forgetPassword</span>
+                <span class="method-start">271116 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">292327 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

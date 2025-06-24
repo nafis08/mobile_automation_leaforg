@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="LogIn and LogOut(failed)">
-    <classes>
-      <class name="leaforg_automation.LogIn">
-        <methods>
-          <include name="endTest"/>
-          <include name="AppiumTest"/>
-          <include name="configureAppium"/>
-        </methods>
-      </class> <!-- leaforg_automation.LogIn -->
-    </classes>
-  </test> <!-- LogIn and LogOut(failed) -->
   <test thread-count="5" name="E2E Framework Test(failed)">
     <classes>
       <class name="leaforg_automation.Registration">
@@ -78,15 +67,4 @@
       </class> <!-- leaforg_automation.ChangePassword -->
     </classes>
   </test> <!-- Change Password(failed) -->
-  <test thread-count="5" name="Forget Password(failed)">
-    <classes>
-      <class name="leaforg_automation.ForgetPassword">
-        <methods>
-          <include name="endTest"/>
-          <include name="configureAppium"/>
-          <include name="forgetPassword"/>
-        </methods>
-      </class> <!-- leaforg_automation.ForgetPassword -->
-    </classes>
-  </test> <!-- Forget Password(failed) -->
 </suite> <!-- Failed suite [Suite] -->

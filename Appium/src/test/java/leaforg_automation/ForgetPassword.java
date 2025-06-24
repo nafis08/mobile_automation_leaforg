@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.ForgetPasswordPage;
+import leaforg_automation.pageObjects.android.TestDataStore;
 
 public class ForgetPassword extends ConfigurationAppium{
 	
@@ -19,7 +20,8 @@ public class ForgetPassword extends ConfigurationAppium{
 		ForgetPasswordPage forgetPassPage = new ForgetPasswordPage(driver);
 		
 		forgetPassPage.clickForgetPwButton();
-		forgetPassPage.inputEmailField("rajkumar@testleaf.com");
+		forgetPassPage.clickEmailField();
+		forgetPassPage.inputEmailField(TestDataStore.Email_ID);
 		forgetPassPage.clickResetButton();
 		AssertJUnit.assertEquals(forgetPassPage.checkResetPopUp(), "A link to reset your password has been sent");
 		

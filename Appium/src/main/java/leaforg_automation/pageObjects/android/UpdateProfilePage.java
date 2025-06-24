@@ -82,7 +82,7 @@ public class UpdateProfilePage {
 	}
 	
 	public boolean checkSelectedState() {
-		return selectedState.isEnabled();
+		return selectedState.isSelected();
 	}
 	
 	public void clickSetButton() {

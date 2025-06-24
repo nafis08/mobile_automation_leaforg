@@ -19,7 +19,7 @@ public class ForgetPasswordPage {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Forgot password?\"]")
 	private WebElement forgetPwButton;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@hint=\"Email\"]")
+	@AndroidFindBy(xpath="//android.webkit.WebView[@text=\"Reset Password\"]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	private WebElement emailField;
 	
 	@AndroidFindBy(xpath="//android.widget.Button[@text=\"RESET\"]")
@@ -33,6 +33,10 @@ public class ForgetPasswordPage {
 	
 	public void clickForgetPwButton() {
 		forgetPwButton.click();
+	}
+	
+	public void clickEmailField() {
+		emailField.click();
 	}
 	
 	public void inputEmailField(String em) {

@@ -1,37 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="2" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-24T09:47:36 CEST" name="Default suite" finished-at="2025-06-24T09:48:26 CEST" duration-ms="49489">
+  <suite started-at="2025-06-24T16:12:21 CEST" name="Suite" finished-at="2025-06-24T16:17:15 CEST" duration-ms="293460">
     <groups>
     </groups>
-    <test started-at="2025-06-24T09:47:36 CEST" name="Default test" finished-at="2025-06-24T09:48:26 CEST" duration-ms="49489">
-      <class name="leaforg_automation.Registration">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.Registration@65b3f4a4]" started-at="2025-06-24T09:47:36 CEST" name="configureAppium" finished-at="2025-06-24T09:47:46 CEST" duration-ms="9630" status="PASS">
+    <test started-at="2025-06-24T16:12:21 CEST" name="LogIn and LogOut" finished-at="2025-06-24T16:12:54 CEST" duration-ms="32942">
+      <class name="leaforg_automation.LogIn">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.LogIn@65b3f4a4]" started-at="2025-06-24T16:12:21 CEST" name="configureAppium" finished-at="2025-06-24T16:12:33 CEST" duration-ms="11907" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="registration()[pri:0, instance:leaforg_automation.Registration@65b3f4a4]" started-at="2025-06-24T09:47:46 CEST" name="registration" finished-at="2025-06-24T09:48:25 CEST" duration-ms="38705" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="AppiumTest()[pri:0, instance:leaforg_automation.LogIn@65b3f4a4]" started-at="2025-06-24T16:12:33 CEST" name="AppiumTest" finished-at="2025-06-24T16:12:53 CEST" duration-ms="19900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppiumTest -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.LogIn@65b3f4a4]" started-at="2025-06-24T16:12:53 CEST" name="endTest" finished-at="2025-06-24T16:12:54 CEST" duration-ms="1110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.LogIn -->
+    </test> <!-- LogIn and LogOut -->
+    <test started-at="2025-06-24T16:12:54 CEST" name="E2E Framework Test" finished-at="2025-06-24T16:13:40 CEST" duration-ms="45415">
+      <class name="leaforg_automation.Registration">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.Registration@5fa07e12]" started-at="2025-06-24T16:12:54 CEST" name="configureAppium" finished-at="2025-06-24T16:13:04 CEST" duration-ms="9534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="registration()[pri:0, instance:leaforg_automation.Registration@5fa07e12]" started-at="2025-06-24T16:13:04 CEST" name="registration" finished-at="2025-06-24T16:13:39 CEST" duration-ms="34784" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.Spinner (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
 Build info: version: '4.33.0', revision: '2c6aaad03a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
 Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c0167d91-06cb-4992-91e4-480baf22c73a, clickElement {id=00000000-0000-1265-0000-01130000000e}]
 Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0245d9dc-d1e0-4ff0-8708-a9a5c4466ad8]]>
+Element: [[AndroidDriver:  on ANDROID (c0167d91-06cb-4992-91e4-480baf22c73a)] -> xpath: (//android.widget.Button[@text="CONTINUE"])[2]]
+Session ID: c0167d91-06cb-4992-91e4-480baf22c73a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.Spinner (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
 Build info: version: '4.33.0', revision: '2c6aaad03a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
 Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c0167d91-06cb-4992-91e4-480baf22c73a, clickElement {id=00000000-0000-1265-0000-01130000000e}]
 Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0245d9dc-d1e0-4ff0-8708-a9a5c4466ad8
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at leaforg_automation.pageObjects.android.TestUtils.selectDate(TestUtils.java:32)
-at leaforg_automation.Registration.registration(Registration.java:43)
+Element: [[AndroidDriver:  on ANDROID (c0167d91-06cb-4992-91e4-480baf22c73a)] -> xpath: (//android.widget.Button[@text="CONTINUE"])[2]]
+Session ID: c0167d91-06cb-4992-91e4-480baf22c73a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:79)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6UsM656f.click(Unknown Source)
+at leaforg_automation.pageObjects.android.RegistrationPage.ClickSecContButton(RegistrationPage.java:127)
+at leaforg_automation.Registration.registration(Registration.java:44)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -60,27 +95,87 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registration -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.Registration@65b3f4a4]" started-at="2025-06-24T09:48:25 CEST" name="endTest" finished-at="2025-06-24T09:48:26 CEST" duration-ms="1121" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.Registration@5fa07e12]" started-at="2025-06-24T16:13:39 CEST" name="endTest" finished-at="2025-06-24T16:13:40 CEST" duration-ms="1090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.Registration -->
+    </test> <!-- E2E Framework Test -->
+    <test started-at="2025-06-24T16:13:40 CEST" name="User Profile Update" finished-at="2025-06-24T16:14:10 CEST" duration-ms="30588">
+      <class name="leaforg_automation.UpdateUserProfile">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.UpdateUserProfile@6a6afff2]" started-at="2025-06-24T16:13:40 CEST" name="configureAppium" finished-at="2025-06-24T16:13:49 CEST" duration-ms="9176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="updateUserProfile()[pri:0, instance:leaforg_automation.UpdateUserProfile@6a6afff2]" started-at="2025-06-24T16:13:49 CEST" name="updateUserProfile" finished-at="2025-06-24T16:14:09 CEST" duration-ms="20271" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Cannot invoke "io.appium.java_client.service.local.AppiumDriverLocalService.stop()" because "this.service" is null]]>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e2623a32-8fc2-4563-8a9d-11acfb84eaf6, findElement {value=//android.view.View[@text="TamilNadu"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e2623a32-8fc2-4563-8a9d-11acfb84eaf6]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.appium.java_client.service.local.AppiumDriverLocalService.stop()" because "this.service" is null
-at leaforg_automation.ConfigurationAppium.endTest(ConfigurationAppium.java:54)
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e2623a32-8fc2-4563-8a9d-11acfb84eaf6, findElement {value=//android.view.View[@text="TamilNadu"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e2623a32-8fc2-4563-8a9d-11acfb84eaf6
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$X04EN4Iq.isSelected(Unknown Source)
+at leaforg_automation.pageObjects.android.UpdateProfilePage.checkSelectedState(UpdateProfilePage.java:85)
+at leaforg_automation.UpdateUserProfile.updateUserProfile(UpdateUserProfile.java:48)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
@@ -99,11 +194,390 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserProfile -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.UpdateUserProfile@6a6afff2]" started-at="2025-06-24T16:14:09 CEST" name="endTest" finished-at="2025-06-24T16:14:10 CEST" duration-ms="1136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-      </class> <!-- leaforg_automation.Registration -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- leaforg_automation.UpdateUserProfile -->
+    </test> <!-- User Profile Update -->
+    <test started-at="2025-06-24T16:14:10 CEST" name="Participant&#039;s Detail Update" finished-at="2025-06-24T16:14:55 CEST" duration-ms="44942">
+      <class name="leaforg_automation.ParticipantDetails">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.ParticipantDetails@503d687a]" started-at="2025-06-24T16:14:10 CEST" name="configureAppium" finished-at="2025-06-24T16:14:20 CEST" duration-ms="9235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="participantDetailsUpdate()[pri:0, instance:leaforg_automation.ParticipantDetails@503d687a]" started-at="2025-06-24T16:14:20 CEST" name="participantDetailsUpdate" finished-at="2025-06-24T16:14:54 CEST" duration-ms="34554" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374, clickElement {id=00000000-0000-12a0-ffff-ffff0000002b}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374)] -> id: android:id/prev]
+Session ID: 1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374, clickElement {id=00000000-0000-12a0-ffff-ffff0000002b}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374)] -> id: android:id/prev]
+Session ID: 1e22cb9a-8bd8-4b6b-bcb7-38a9feadd374
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at leaforg_automation.pageObjects.android.TestUtils.selectDate(TestUtils.java:55)
+at leaforg_automation.ParticipantDetails.participantDetailsUpdate(ParticipantDetails.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- participantDetailsUpdate -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.ParticipantDetails@503d687a]" started-at="2025-06-24T16:14:54 CEST" name="endTest" finished-at="2025-06-24T16:14:55 CEST" duration-ms="1150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.ParticipantDetails -->
+    </test> <!-- Participant's Detail Update -->
+    <test started-at="2025-06-24T16:14:55 CEST" name="Contact Support" finished-at="2025-06-24T16:15:26 CEST" duration-ms="30765">
+      <class name="leaforg_automation.ContactSupport">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.ContactSupport@19d481b]" started-at="2025-06-24T16:14:55 CEST" name="configureAppium" finished-at="2025-06-24T16:15:05 CEST" duration-ms="9703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="contactSupport()[pri:0, instance:leaforg_automation.ContactSupport@19d481b]" started-at="2025-06-24T16:15:05 CEST" name="contactSupport" finished-at="2025-06-24T16:15:25 CEST" duration-ms="19883" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [95b88ae8-341b-4b98-8314-1d6480c011a5, findElement {value=//android.widget.EditText[@hint="Subject"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 95b88ae8-341b-4b98-8314-1d6480c011a5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [95b88ae8-341b-4b98-8314-1d6480c011a5, findElement {value=//android.widget.EditText[@hint="Subject"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 95b88ae8-341b-4b98-8314-1d6480c011a5
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$X04EN4Iq.sendKeys(Unknown Source)
+at leaforg_automation.pageObjects.android.ContactSupportPage.inputSubjectField(ContactSupportPage.java:62)
+at leaforg_automation.ContactSupport.contactSupport(ContactSupport.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactSupport -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.ContactSupport@19d481b]" started-at="2025-06-24T16:15:25 CEST" name="endTest" finished-at="2025-06-24T16:15:26 CEST" duration-ms="1175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.ContactSupport -->
+    </test> <!-- Contact Support -->
+    <test started-at="2025-06-24T16:15:26 CEST" name="Batches Update" finished-at="2025-06-24T16:16:08 CEST" duration-ms="42189">
+      <class name="leaforg_automation.BatchesUpdate">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.BatchesUpdate@77eca502]" started-at="2025-06-24T16:15:26 CEST" name="configureAppium" finished-at="2025-06-24T16:15:36 CEST" duration-ms="10088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="batchesUpdate()[pri:0, instance:leaforg_automation.BatchesUpdate@77eca502]" started-at="2025-06-24T16:15:36 CEST" name="batchesUpdate" finished-at="2025-06-24T16:16:07 CEST" duration-ms="31037" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@resource-id="alert-hdr-0"]})]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@resource-id="alert-hdr-0"]})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZSUseYHE.getText(Unknown Source)
+at leaforg_automation.pageObjects.android.BatchPage.checkErrorPopUp(BatchPage.java:53)
+at leaforg_automation.BatchesUpdate.batchesUpdate(BatchesUpdate.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@162c1dfb (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@resource-id="alert-hdr-0"]})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- batchesUpdate -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.BatchesUpdate@77eca502]" started-at="2025-06-24T16:16:07 CEST" name="endTest" finished-at="2025-06-24T16:16:08 CEST" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.BatchesUpdate -->
+    </test> <!-- Batches Update -->
+    <test started-at="2025-06-24T16:16:08 CEST" name="Change Password" finished-at="2025-06-24T16:16:43 CEST" duration-ms="34538">
+      <class name="leaforg_automation.ChangePassword">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.ChangePassword@49dc7102]" started-at="2025-06-24T16:16:08 CEST" name="configureAppium" finished-at="2025-06-24T16:16:18 CEST" duration-ms="9709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="changePassword()[pri:0, instance:leaforg_automation.ChangePassword@49dc7102]" started-at="2025-06-24T16:16:18 CEST" name="changePassword" finished-at="2025-06-24T16:16:42 CEST" duration-ms="23833" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [63357d92-325f-4ee7-a0bc-9920cea8d35b, findElement {value=//android.widget.EditText[@hint="Current Password"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 63357d92-325f-4ee7-a0bc-9920cea8d35b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.5', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [63357d92-325f-4ee7-a0bc-9920cea8d35b, findElement {value=//android.widget.EditText[@hint="Current Password"], using=xpath}]
+Capabilities {appium:app: /Users/zarintasnim/git/repo..., appium:appActivity: com.testleaf.leaforg.MainAc..., appium:appPackage: com.testleaf.leaforg, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/zarintasnim/git/repo..., automationName: UIAutomator2, deviceName: TestDevice, disableWindowAnimation: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 15, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 63357d92-325f-4ee7-a0bc-9920cea8d35b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZSUseYHE.sendKeys(Unknown Source)
+at leaforg_automation.pageObjects.android.ChangePasswordPage.inputCurrentPassword(ChangePasswordPage.java:52)
+at leaforg_automation.ChangePassword.changePassword(ChangePassword.java:41)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePassword -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.ChangePassword@49dc7102]" started-at="2025-06-24T16:16:42 CEST" name="endTest" finished-at="2025-06-24T16:16:43 CEST" duration-ms="992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.ChangePassword -->
+    </test> <!-- Change Password -->
+    <test started-at="2025-06-24T16:16:43 CEST" name="Forget Password" finished-at="2025-06-24T16:17:15 CEST" duration-ms="31986">
+      <class name="leaforg_automation.ForgetPassword">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:leaforg_automation.ForgetPassword@65f095f8]" started-at="2025-06-24T16:16:43 CEST" name="configureAppium" finished-at="2025-06-24T16:16:52 CEST" duration-ms="9656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="forgetPassword()[pri:0, instance:leaforg_automation.ForgetPassword@65f095f8]" started-at="2025-06-24T16:16:52 CEST" name="forgetPassword" finished-at="2025-06-24T16:17:14 CEST" duration-ms="21210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgetPassword -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:leaforg_automation.ForgetPassword@65f095f8]" started-at="2025-06-24T16:17:14 CEST" name="endTest" finished-at="2025-06-24T16:17:15 CEST" duration-ms="1118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- leaforg_automation.ForgetPassword -->
+    </test> <!-- Forget Password -->
+  </suite> <!-- Suite -->
 </testng-results>
