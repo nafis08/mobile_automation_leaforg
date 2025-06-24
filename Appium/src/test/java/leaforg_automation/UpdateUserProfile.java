@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.LoginPage;
+import leaforg_automation.pageObjects.android.TestDataStore;
 import leaforg_automation.pageObjects.android.TestUtils;
 import leaforg_automation.pageObjects.android.UpdateProfilePage;
 
@@ -31,18 +32,22 @@ public class UpdateUserProfile extends ConfigurationAppium {
 		updateProfile.clickSettingProfile();
 		updateProfile.clickUserProfile();
 		
-		String randomString = TestUtils.generateRandomAlphabetic();
-		updateProfile.inputFirstName(randomString);
+		String fristName = TestUtils.generateRandomAlphabetic();
+		TestDataStore.firstName = fristName;
+		updateProfile.inputFirstName(fristName);
 		
-		String randomShortString = TestUtils.generateRandomShortAlphabetic();
-		updateProfile.inputLastName(randomShortString);
+		String lastName = TestUtils.generateRandomShortAlphabetic();
+		TestDataStore.lastName = lastName;
+		updateProfile.inputLastName(lastName);
 		
 		Assert.assertFalse(updateProfile.checkEmailField(), "Email field should be disabled");
 		updateProfile.clearMobileNumberFiled();
-		updateProfile.inputMobileNumber("888-999-4567"); //Number should be auto generated
+		
+		String phoneNum = TestUtils.RandomUSPhoneNumber();
+		updateProfile.inputMobileNumber(phoneNum); //Number should be auto generated
 		Assert.assertFalse(updateProfile.checkSelectedState(), "Selected state field should be disabled");
-		TestUtils.selectDate(driver, "2011", 14, Calendar.MAY);
-		updateProfile.clickSetButton();
+		TestUtils.selectDate(driver, TestUtils.GenerateRandomYear(2015, 2020), 14, Calendar.MAY);
+		//updateProfile.clickSetButton();
 		updateProfile.clickSaveChanges();
 		AssertJUnit.assertEquals(updateProfile.textConfirmationPopUp(), "Your changes are submitted for review and approval.");
 		updateProfile.clickOkButton();

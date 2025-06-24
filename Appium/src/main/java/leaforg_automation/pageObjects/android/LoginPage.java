@@ -1,5 +1,6 @@
 package leaforg_automation.pageObjects.android;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -25,8 +26,16 @@ public class LoginPage {
 	@AndroidFindBy(className="android.widget.Button")
 	private WebElement loginButton;
 	
+	/*
 	@AndroidFindBy(xpath="//android.view.View[@text=\"ArgamnArgamn Singh\"]")
 	private WebElement profileName;
+	
+	
+	//@AndroidFindBy(xpath="//android.view.View[@elementId=\"00000000-0000-08a3-0000-008d0000000e\"]")
+	String fullName = TestDataStore.firstName + " " + TestDataStore.lastName;
+	String xpath = "//android.view.View[@text=\"" + fullName + "\"]";
+	WebElement profileName=driver.findElement(By.xpath(xpath));
+	*/
 	
 	@AndroidFindBy(xpath="//android.view.View[@text=\"M8976567\nTAMILNADU\"]")
 	private WebElement licenseNumber;
@@ -58,10 +67,7 @@ public class LoginPage {
 	public void clickLoginButton() {
 		loginButton.click();;
 	}
-	
-	public String getProfileName() {
-		return profileName.getText();
-	}
+
 	
 	public String getLicenseNumber() {
 		return licenseNumber.getText();
@@ -86,6 +92,25 @@ public class LoginPage {
 	public void clickLogoutCancel() {
 		logoutCancel.click();;
 	}
+	
+	public WebElement getProfileNameElement(String firstName, String lastName) {
+	    String fullName = firstName + " " + lastName;
+	    String xpath = String.format("//android.view.View[@text='%s']", fullName);
+	    return driver.findElement(By.xpath(xpath));
+	}
+	
+	public WebElement getLicenseNumElement(String licenseNum) {
+	    String licenseNumber = licenseNum;
+	    String xpath = String.format("//android.view.View[@text='%s']", licenseNumber);
+	    return driver.findElement(By.xpath(xpath));
+	}
+	
+	public WebElement getParticipantIDElement(String participantID) {
+	    String participantIDNum = participantID;
+	    String xpath = String.format("//android.view.View[@text='%s']", participantIDNum);
+	    return driver.findElement(By.xpath(xpath));
+	}
+
 	
 
 }

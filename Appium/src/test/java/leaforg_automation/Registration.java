@@ -40,11 +40,11 @@ public class Registration extends ConfigurationAppium{
 		registrationPage.clickContButton();
 		registrationPage.inputlicenseNumber("A7864908");
 		registrationPage.clickSecDatePicker();
-		TestUtils.selectDate(driver, "2025", 22, Calendar.JUNE);
+		TestUtils.selectDateForLicense(driver, "2027", 22, Calendar.JUNE);
 		registrationPage.ClickSecContButton();
 		registrationPage.inputParticipantID("8574839");
 		registrationPage.clickdatePicker();
-		TestUtils.selectDate(driver, "2025", 20, Calendar.JUNE);
+		TestUtils.selectDateForLicense(driver, "2028", 20, Calendar.JUNE);
 		
 		String mentorName = TestUtils.generateRandomAlphabetic();
 		registrationPage.inputMentorName(mentorName);

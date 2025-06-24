@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import leaforg_automation.pageObjects.android.TestUtils;
 import leaforg_automation.pageObjects.android.LoginPage;
 import leaforg_automation.pageObjects.android.ParticipantPage;
+import leaforg_automation.pageObjects.android.TestDataStore;
 
 public class ParticipantDetails extends ConfigurationAppium{
 	@Test
@@ -29,8 +30,10 @@ public class ParticipantDetails extends ConfigurationAppium{
 		participantDetail.clickSettingProfile();
 		participantDetail.clickParticipantDetails();
 		AssertJUnit.assertEquals(participantDetail.checkParticipantInfo(), "Edit Participant Info");
-		participantDetail.inputParticipantID("37394728");   //Needs to be auto generated
-		TestUtils.selectDate(driver, "2036", 14, Calendar.APRIL);
+		
+		String participantID = TestUtils.RandomNumericString(8);
+		participantDetail.inputParticipantID(participantID);   //Needs to be auto generated
+		TestUtils.selectDate(driver, TestUtils.GenerateRandomYear(2036, 2070), 14, Calendar.APRIL);
 		
 		String randomString = TestUtils.generateRandomAlphabetic();
 		participantDetail.inputMentorName(randomString);
@@ -38,8 +41,10 @@ public class ParticipantDetails extends ConfigurationAppium{
 		String randomShortStringSec = TestUtils.generateRandomShortAlphabetic();
 		participantDetail.inputGroupName(randomShortStringSec);
 		
-		participantDetail.inputdriverLicense("M94058334");
-		TestUtils.selectDate(driver, "2025", 14, Calendar.JULY);
+		String licenseNum = TestUtils.RandomAlphaNumericId();
+		TestDataStore.licenseNum = licenseNum;
+		participantDetail.inputdriverLicense(licenseNum);
+		TestUtils.selectDate(driver, TestUtils.GenerateRandomYear(2015, 2025), 14, Calendar.JULY);
 		participantDetail.clickSaveButton();
 		participantDetail.clickBackButtonn();
 		

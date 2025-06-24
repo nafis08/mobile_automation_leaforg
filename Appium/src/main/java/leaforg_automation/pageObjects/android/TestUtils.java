@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.security.SecureRandom;
@@ -33,6 +34,50 @@ public class TestUtils {
 
         // Select year
         driver.findElement(AppiumBy.id("android:id/date_picker_header_year")).click();
+        WebElement yearList = driver.findElement(AppiumBy.androidUIAutomator(
+            "new UiScrollable(new UiSelector().scrollable(true)).scrollBackward().scrollIntoView(new UiSelector().text(\"" + targetYear + "\"))"));
+        yearList.click();
+
+        // Get current displayed month
+        String date_found = driver.findElement(AppiumBy.id("android:id/date_picker_header_date")).getText().trim();
+        SimpleDateFormat inputFormat = new SimpleDateFormat("E, MMM dd", Locale.ENGLISH);
+        Date date = inputFormat.parse(date_found);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int currentMonth = calendar.get(Calendar.MONTH); // 0-based
+        
+        int clicks = currentMonth - targetMonth;
+
+        if (clicks > 0) {
+            // Go backward (to earlier months)
+            for (int i = 0; i < clicks; i++) {
+                driver.findElement(AppiumBy.id("android:id/prev")).click();
+            }
+        } else if (clicks < 0) {
+            // Go forward (to future months)
+            for (int i = 0; i < Math.abs(clicks); i++) {
+                driver.findElement(AppiumBy.id("android:id/next")).click();
+            }
+        }
+
+        // Select the day
+        WebElement day = driver.findElement(By.xpath("//android.view.View[@text='" + targetDay + "']"));
+        day.click();
+
+        // Confirm
+        driver.findElement(By.id("android:id/button1")).click();
+    }
+    
+    //For date picker in license
+    public static void selectDateForLicense(AndroidDriver driver, String targetYear, int targetDay, int targetMonth) throws ParseException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // Open the spinner if not already
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Spinner"))).click();
+
+        // Select year
+        driver.findElement(By.id("android:id/date_picker_header_year")).click();
         WebElement yearList = driver.findElement(AppiumBy.androidUIAutomator(
             "new UiScrollable(new UiSelector().scrollable(true)).scrollBackward().scrollIntoView(new UiSelector().text(\"" + targetYear + "\"))"));
         yearList.click();
@@ -126,5 +171,63 @@ public class TestUtils {
 
             return String.format("%03d-%03d-%04d", areaCode, centralOfficeCode, lineNumber);
         }
+        
+        //Participant ID generator
+        public static String RandomNumericString(int length) {
+            SecureRandom rand = new SecureRandom();
+            StringBuilder sb = new StringBuilder(length);
+
+            for (int i = 0; i < length; i++) {
+                sb.append(rand.nextInt(10));  // generates 0–9
+            }
+
+            return sb.toString();
+        }
+        
+        //License number generator
+        public static String RandomAlphaNumericId() {
+            SecureRandom rand = new SecureRandom();
+
+            // Generate a random uppercase letter (A–Z)
+            char letter = (char) ('A' + rand.nextInt(26));
+
+            // Generate 7-digit numeric string
+            int number = rand.nextInt(10_000_000);  // 0 to 9999999
+            String numberPart = String.format("%07d", number);  // zero-padded
+
+            return letter + numberPart;
+        }
+        
+        //Phone Number generator
+        public static String RandomUSPhoneNumber() {
+            SecureRandom rand = new SecureRandom();
+
+            int areaCode = rand.nextInt(900) + 100;          // 100–999
+            int centralOfficeCode = rand.nextInt(900) + 100; // 100–999
+            int lineNumber = rand.nextInt(10000);            // 0000–9999
+
+            return String.format("%03d-%03d-%04d", areaCode, centralOfficeCode, lineNumber);
+        }
+        
+        //Random Year Generator
+        public static String GenerateRandomYear(int minYear, int maxYear) {
+            if (minYear < 1000 || maxYear > 9999) {
+                throw new IllegalArgumentException("Years must be 4-digit numbers.");
+            }
+            if (minYear >= maxYear) {
+                throw new IllegalArgumentException("minYear must be less than maxYear.");
+            }
+
+            SecureRandom rand = new SecureRandom();
+            int randomYear = rand.nextInt(maxYear - minYear + 1) + minYear; // inclusive range
+            System.out.println("The random year is: " + randomYear);
+            return String.valueOf(randomYear);
+        }
+
+
+
+
+
+
     
 }

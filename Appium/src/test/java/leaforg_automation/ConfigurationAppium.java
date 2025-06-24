@@ -27,12 +27,12 @@ public class ConfigurationAppium {
 	@BeforeClass
 	public void configureAppium() throws MalformedURLException, URISyntaxException {
 		//Start Appium Server automatically before the test
-				/*
+				
 				service = new AppiumServiceBuilder()
 						.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
 						.withIPAddress("127.0.0.1").usingPort(4723).build();
 				service.start();
-				*/
+				
 				//Device connection setup through UiAutomator2
 				options = new UiAutomator2Options();
 				options.setDeviceName("TestDevice");

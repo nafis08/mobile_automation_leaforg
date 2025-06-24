@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.BatchPage;
 import leaforg_automation.pageObjects.android.LoginPage;
+import leaforg_automation.pageObjects.android.TestDataStore;
 
 public class BatchesUpdate extends ConfigurationAppium{
 	@Test
@@ -18,7 +19,7 @@ public class BatchesUpdate extends ConfigurationAppium{
 		configureAppium();
 		
 		LoginPage appLogin = new LoginPage(driver);
-		appLogin.inputLoginEmail("rajkumar@testleaf.com");
+		appLogin.inputLoginEmail(TestDataStore.Email_ID);
 		appLogin.inputPassword("Leaf@123");
 		appLogin.clickLoginButton();
 		
