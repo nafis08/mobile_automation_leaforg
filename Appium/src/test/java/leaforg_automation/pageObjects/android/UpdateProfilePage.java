@@ -46,6 +46,8 @@ public class UpdateProfilePage {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Your changes are submitted for review and approval.\"]")
 	private WebElement confirmationPopUp;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Changes saved successfully\"]")
+	private WebElement altConfirmationPopUp;
 	
 	@AndroidFindBy(xpath="//android.widget.Button[@text=\"OK\"]")
 	private WebElement okButton;
@@ -97,12 +99,24 @@ public class UpdateProfilePage {
 		return confirmationPopUp.getText();
 	}
 	
+	public String textAltConfirmationPopUp() {
+		return altConfirmationPopUp.getText();
+	}
+	
 	public void clickOkButton() {
 		okButton.click();
 	}
 	
 	public void clickBackButtonn() {
 		backButton.click();
+	}
+	
+	public void clearFirstName() {
+		firstName.clear();
+	}
+	
+	public boolean saveChangesButtonEnabled() {
+		return saveChanges.isEnabled();
 	}
 
 }

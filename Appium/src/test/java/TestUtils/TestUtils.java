@@ -1,6 +1,8 @@
-package leaforg_automation.pageObjects.android;
+package TestUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import leaforg_automation.UpdateUserProfile;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -222,6 +224,29 @@ public class TestUtils {
             int randomYear = rand.nextInt(maxYear - minYear + 1) + minYear; // inclusive range
             System.out.println("The random year is: " + randomYear);
             return String.valueOf(randomYear);
+        }
+        
+        //Name for profile
+        public static String generateFirstName() {
+        	if(TestDataStore.nameSelected == 0) {
+        		String firstName = "Francis";
+        		return firstName;
+        	}
+        	else {
+        		String firstName = "Daniel";
+        		return firstName;
+        	}
+        }
+        
+        public static String generateLastName() {
+        	if(TestDataStore.nameSelected == 0) {
+        		String lastName = "Xxevier";
+        		return lastName;
+        	}
+        	else {
+        		String lastName = "Raegan";
+        		return lastName;
+        	}
         }
 
 

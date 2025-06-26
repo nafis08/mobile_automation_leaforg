@@ -1,6 +1,13 @@
 package leaforg_automation;
 
 import org.testng.annotations.Test;
+
+import TestUtils.TestDataStore;
+
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
@@ -17,8 +24,8 @@ public class ContactSupport extends ConfigurationAppium{
 		configureAppium();
 		
 		LoginPage appLogin = new LoginPage(driver);
-		appLogin.inputLoginEmail("rajkumar@testleaf.com");
-		appLogin.inputPassword("Leaf@123");
+		appLogin.inputLoginEmail(TestDataStore.Email_ID);
+		appLogin.inputPassword(TestDataStore.PASSWORD);
 		appLogin.clickLoginButton();
 		
 		ContactSupportPage contactSupport = new ContactSupportPage(driver);
@@ -31,6 +38,25 @@ public class ContactSupport extends ConfigurationAppium{
 		contactSupport.clickSendButton();
 		AssertJUnit.assertEquals(contactSupport.checkConfirmationPopUp(), "Thanks for contacting us. We will be in touch shortly.");
 		contactSupport.clickOkButton();
+		
+	}
+	
+	@Test
+	public void contactSupportWithoutContent() throws MalformedURLException, URISyntaxException {
+		configureAppium();
+		
+		LoginPage appLogin = new LoginPage(driver);
+		appLogin.inputLoginEmail(TestDataStore.Email_ID);
+		appLogin.inputPassword(TestDataStore.PASSWORD);
+		appLogin.clickLoginButton();
+		
+		ContactSupportPage contactSupport = new ContactSupportPage(driver);
+		contactSupport.clickSettingProfile();
+		contactSupport.clickContactSupportButton();
+		AssertJUnit.assertTrue(contactSupport.checkSupportEmailField());
+		AssertJUnit.assertTrue(contactSupport.checkEmailField());
+		contactSupport.inputSubjectField("Regarding Issue");
+		Assert.assertFalse(contactSupport.checkSendButton());
 		
 	}
 

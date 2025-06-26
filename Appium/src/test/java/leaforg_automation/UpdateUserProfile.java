@@ -2,6 +2,14 @@ package leaforg_automation;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import TestUtils.TestDataStore;
+import TestUtils.TestUtils;
+
+import org.testng.AssertJUnit;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
@@ -11,8 +19,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.LoginPage;
-import leaforg_automation.pageObjects.android.TestDataStore;
-import leaforg_automation.pageObjects.android.TestUtils;
 import leaforg_automation.pageObjects.android.UpdateProfilePage;
 
 
@@ -46,11 +52,57 @@ public class UpdateUserProfile extends ConfigurationAppium {
 		String phoneNum = TestUtils.RandomUSPhoneNumber();
 		updateProfile.inputMobileNumber(phoneNum); //Number should be auto generated
 		Assert.assertFalse(updateProfile.checkSelectedState(), "Selected state field should be disabled");
-		TestUtils.selectDate(driver, TestUtils.GenerateRandomYear(2015, 2020), 14, Calendar.MAY);
+		TestUtils.selectDate(driver, TestUtils.GenerateRandomYear(2010, 2020), 14, Calendar.MAY);
 		//updateProfile.clickSetButton();
 		updateProfile.clickSaveChanges();
-		AssertJUnit.assertEquals(updateProfile.textConfirmationPopUp(), "Your changes are submitted for review and approval.");
+		Assert.assertEquals(updateProfile.textConfirmationPopUp(), "Your changes are submitted for review and approval.");
 		updateProfile.clickOkButton();
+		updateProfile.clickBackButtonn();
+	}
+	
+	@Test
+	public void updateUserProfileWithPhoneNumberOnly() throws MalformedURLException, URISyntaxException, ParseException {
+		configureAppium();
+
+		LoginPage appLogin = new LoginPage(driver);
+		appLogin.inputLoginEmail("rajkumar@testleaf.com");
+		appLogin.inputPassword("Leaf@123");
+		appLogin.clickLoginButton();
+		
+		UpdateProfilePage updateProfile = new UpdateProfilePage(driver);
+		
+		updateProfile.clickSettingProfile();
+		updateProfile.clickUserProfile();
+		
+		updateProfile.clearMobileNumberFiled();
+		
+		String phoneNum = TestUtils.RandomUSPhoneNumber();
+		updateProfile.inputMobileNumber(phoneNum); //Number should be auto generated
+		
+		updateProfile.clickSaveChanges();
+		Assert.assertEquals(updateProfile.textAltConfirmationPopUp(), "Changes saved successfully");
+		updateProfile.clickOkButton();
+		updateProfile.clickBackButtonn();
+	}
+	
+	@Test
+	public void updateUserProfileWithoutName() throws MalformedURLException, URISyntaxException, ParseException {
+		configureAppium();
+
+		LoginPage appLogin = new LoginPage(driver);
+		appLogin.inputLoginEmail("rajkumar@testleaf.com");
+		appLogin.inputPassword("Leaf@123");
+		appLogin.clickLoginButton();
+		
+		UpdateProfilePage updateProfile = new UpdateProfilePage(driver);
+		
+		updateProfile.clickSettingProfile();
+		updateProfile.clickUserProfile();
+		
+		updateProfile.clearFirstName();
+		
+		updateProfile.saveChangesButtonEnabled();
+		Assert.assertFalse(updateProfile.saveChangesButtonEnabled());
 		updateProfile.clickBackButtonn();
 	}
 

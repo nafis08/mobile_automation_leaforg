@@ -70,6 +70,12 @@ public class RegistrationPage {
 	@AndroidFindBy(id = "android:id/date_picker_header_year")
 	private WebElement yearPicker;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Email must be in xxx@xxx.xxx format\"]")
+	private WebElement emailWarning;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Hi! Phone number must be 999-999-9999\"]")
+	private WebElement phoneWarning;
+	
 	
 	public boolean yearPicker() {
 		return yearPicker.isDisplayed();
@@ -145,6 +151,14 @@ public class RegistrationPage {
 	
 	public void clickSecDatePicker() {
 		secDatePicker.click();
+	}
+	
+	public String checkEmailWarning() {
+		return emailWarning.getText();
+	}
+	
+	public String checkPhoneWarning() {
+		return phoneWarning.getText();
 	}
 	
 }

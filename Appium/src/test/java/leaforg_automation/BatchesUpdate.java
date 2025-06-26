@@ -2,6 +2,13 @@ package leaforg_automation;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import TestUtils.TestDataStore;
+
+import org.testng.AssertJUnit;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 
@@ -11,11 +18,12 @@ import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.BatchPage;
 import leaforg_automation.pageObjects.android.LoginPage;
-import leaforg_automation.pageObjects.android.TestDataStore;
 
 public class BatchesUpdate extends ConfigurationAppium{
 	@Test
 	public void batchesUpdate() throws MalformedURLException, URISyntaxException {
+		
+		//Validation will be updated upon further development of this module
 		configureAppium();
 		
 		LoginPage appLogin = new LoginPage(driver);
