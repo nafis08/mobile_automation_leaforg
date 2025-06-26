@@ -77,5 +77,9 @@ public class ContactSupportPage {
 	public void clickOkButton() {
 		okButton.click();
 	}
+	
+	public boolean checkSendButton() {
+		return sendButton.isEnabled();
+	}
 
 }

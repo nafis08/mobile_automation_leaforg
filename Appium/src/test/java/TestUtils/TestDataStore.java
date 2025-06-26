@@ -1,4 +1,4 @@
-package leaforg_automation.pageObjects.android;
+package TestUtils;
 
 public class TestDataStore {
 	public static String firstName;
@@ -6,4 +6,6 @@ public class TestDataStore {
 	public static String licenseNum;
 	public static String participantID;
 	public static String Email_ID = "rajkumar@testleaf.com";
+	public static String PASSWORD = "Leaf@123";
+	public static int nameSelected;
 }

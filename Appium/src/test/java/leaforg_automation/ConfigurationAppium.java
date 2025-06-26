@@ -5,6 +5,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -27,20 +31,25 @@ public class ConfigurationAppium {
 	@BeforeClass
 	public void configureAppium() throws MalformedURLException, URISyntaxException {
 		//Start Appium Server automatically before the test
-				
+				/*
 				service = new AppiumServiceBuilder()
 						.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
 						.withIPAddress("127.0.0.1").usingPort(4723).build();
 				service.start();
-				
+				*/
 				//Device connection setup through UiAutomator2
 				options = new UiAutomator2Options();
-				options.setDeviceName("TestDevice");
+				options.setDeviceName("TestDevice API 36");
 				options.setApp("/Users/zarintasnim/git/repository/Appium/src/test/java/app_installer/leaforg.apk");
 				options.setCapability("disableWindowAnimation", true);
+				options.autoGrantPermissions();
+			    
 				
 				//Android driver initiation and server connection
 				driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
+				
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+			    capabilities.setCapability("autoGrantPermissions", "true");
 				
 				driver.findElement(AppiumBy.id("android:id/button1")).click();
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -51,7 +60,7 @@ public class ConfigurationAppium {
 		//App close
 		driver.quit();		
 		//Stop the server
-		service.stop();
-		
+		// service.stop();
+
 	}
 }

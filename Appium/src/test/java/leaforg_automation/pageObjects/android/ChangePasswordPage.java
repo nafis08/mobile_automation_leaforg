@@ -40,6 +40,9 @@ public class ChangePasswordPage {
 	@AndroidFindBy(xpath="//android.widget.Button[@text=\"OK\"]")
 	private WebElement okButton;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"alert-msg-0\"]")
+	private WebElement errorPopUp;
+	
 	public void clickSettingProfile() {
 		settingProfile.click();
 	}
@@ -70,6 +73,10 @@ public class ChangePasswordPage {
 	
 	public void clickOkButton() {
 		okButton.click();
+	}
+	
+	public String textErrorPopUp() {
+		return errorPopUp.getText();
 	}
 
 }

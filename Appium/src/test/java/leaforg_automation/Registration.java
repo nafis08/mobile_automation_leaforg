@@ -1,6 +1,12 @@
 package leaforg_automation;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+import TestUtils.TestUtils;
+
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
@@ -9,7 +15,6 @@ import java.util.Calendar;
 import org.testng.annotations.Test;
 
 import leaforg_automation.pageObjects.android.RegistrationPage;
-import leaforg_automation.pageObjects.android.TestUtils;
 
 public class Registration extends ConfigurationAppium{
 	@Test
@@ -52,6 +57,24 @@ public class Registration extends ConfigurationAppium{
 		String groupName = TestUtils.generateRandomShortAlphabetic();
 		registrationPage.inputGroupName(groupName);
 		registrationPage.clickRegistrationButton();
+			
+	}
+	
+	@Test
+	public void registrationWithInvalidInput() throws MalformedURLException, URISyntaxException, ParseException {
+		//Negative test
+		configureAppium();
+		RegistrationPage registrationPage = new RegistrationPage(driver);
+		registrationPage.clickCreateAccount();
+		
+		registrationPage.inputEmail("nullnll");
+		registrationPage.clickContButton();
+		Assert.assertEquals(registrationPage.checkEmailWarning(), "Email must be in xxx@xxx.xxx format");
+		
+		registrationPage.inputPhoneNumber("742-648-49948332");
+		registrationPage.clickStateSelection();
+		registrationPage.clickSelectedState();
+		Assert.assertEquals(registrationPage.checkPhoneWarning(), "Hi! Phone number must be 999-999-9999");
 			
 	}
 }

@@ -27,6 +27,7 @@ public class LoginPage {
 	private WebElement loginButton;
 	
 	/*
+	 * Xpath is not proper to verify user profile
 	@AndroidFindBy(xpath="//android.view.View[@text=\"ArgamnArgamn Singh\"]")
 	private WebElement profileName;
 	
@@ -54,6 +55,21 @@ public class LoginPage {
 	
 	@AndroidFindBy(xpath="//android.widget.Button[@text=\"NO, CANCEL\"]")
 	private WebElement logoutCancel;
+	
+	@AndroidFindBy(xpath="(//android.widget.TextView[@text=\"Field Required\"])[1]")
+	private WebElement emailFiedlWarning;
+	
+	@AndroidFindBy(xpath="((//android.widget.TextView[@text=\"Field Required\"])[2]")
+	private WebElement passwordFiedlWarning;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Given password doesn't match\"]")
+	private WebElement wrongPasswordMsg;
+	
+	@AndroidFindBy(xpath="//android.widget.Button[@text=\"BACK\"]")
+	private WebElement backButton;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"User does not exist\"]")
+	private WebElement wrongEmail;
 	
 	
 	public void inputLoginEmail(String email) {
@@ -109,6 +125,26 @@ public class LoginPage {
 	    String participantIDNum = participantID;
 	    String xpath = String.format("//android.view.View[@text='%s']", participantIDNum);
 	    return driver.findElement(By.xpath(xpath));
+	}
+	
+	public String checkEmailWarning() {
+		return emailFiedlWarning.getText();
+	}
+	
+	public String checkPasswordWarning() {
+		return passwordFiedlWarning.getText();
+	}
+	
+	public String checkWrongPasswordMsg() {
+		return wrongPasswordMsg.getText();
+	}
+	
+	public void clickBackButton() {
+		backButton.click();
+	}
+	
+	public String checkWrongEmail() {
+		return wrongEmail.getText();
 	}
 
 	

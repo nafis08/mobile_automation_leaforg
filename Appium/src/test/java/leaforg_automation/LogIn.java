@@ -2,6 +2,13 @@ package leaforg_automation;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import TestUtils.TestDataStore;
+
+import org.testng.AssertJUnit;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -16,7 +23,6 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import leaforg_automation.pageObjects.android.CommonPageElement;
 import leaforg_automation.pageObjects.android.LoginPage;
-import leaforg_automation.pageObjects.android.TestDataStore;
 
 
 public class LogIn extends ConfigurationAppium{
@@ -29,17 +35,18 @@ public class LogIn extends ConfigurationAppium{
 	 * @throws InterruptedException the interrupted exception
 	 */
 	@Test
-	public void AppiumTest() throws MalformedURLException, URISyntaxException, InterruptedException {
+	public void loginTest() throws MalformedURLException, URISyntaxException, InterruptedException {
 		
 		configureAppium();
 		LoginPage loginPage = new LoginPage(driver);
 		
 		loginPage.inputLoginEmail(TestDataStore.Email_ID);
-		loginPage.inputPassword("Leaf@123");
+		loginPage.inputPassword(TestDataStore.PASSWORD);
 		loginPage.clickLoginButton();
 		
 		
 		//Validation
+		//To be enabled after xpath issue is fixed
 		/*
 		String firstName = TestDataStore.firstName;
 		String lastName = TestDataStore.lastName;
@@ -61,9 +68,44 @@ public class LogIn extends ConfigurationAppium{
 		commonPageElement.clickSettingProfile();
 		
 		loginPage.clickLogoutButton();
-		Assert.assertEquals(loginPage.checkLogoutConfPopUp(), "Are you sure you want to logout?");
+		AssertJUnit.assertEquals(loginPage.checkLogoutConfPopUp(), "Are you sure you want to logout?");
 		loginPage.clickLogoutConfirm();
 		
 	}
+	
+	@Test
+	public void loginWithoudEmailPassword() throws MalformedURLException, URISyntaxException, InterruptedException {
+		
+		configureAppium();
+		LoginPage loginPage = new LoginPage(driver);
+		
+		loginPage.clickLoginButton();
+		
+		Assert.assertEquals(loginPage.checkEmailWarning(), "Field Required");
+		Assert.assertEquals(loginPage.checkPasswordWarning(), "Field Required");
+		
+	}
+	
+	@Test
+	public void loginWithWrongEmailPassword() throws MalformedURLException, URISyntaxException, InterruptedException {
+		
+		configureAppium();
+		LoginPage loginPage = new LoginPage(driver);
+		
+		loginPage.inputLoginEmail(TestDataStore.Email_ID);
+		loginPage.inputPassword("Leaf@1233");
+		loginPage.clickLoginButton();
+		
+		Assert.assertEquals(loginPage.checkWrongPasswordMsg(), "Given password doesn't match");
+		loginPage.clickBackButton();
+		
+		loginPage.inputLoginEmail("Kaput@gmail.com");
+		loginPage.inputPassword("Kaput@123");
+		loginPage.clickLoginButton();
+		
+		Assert.assertEquals(loginPage.checkWrongEmail(), "User does not exist");
+		loginPage.clickBackButton();
+	}
+	
 
 }
